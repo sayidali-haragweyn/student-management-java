@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentm.HelloController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane layoutX="-1.0" layoutY="11.0" prefHeight="409.0" prefWidth="286.0" />
+            <AnchorPane layoutX="-1.0" layoutY="15.0" prefHeight="409.0" prefWidth="286.0" style="-fx-background-color: linear-gradient(to bottom right, #2d658c, #2ca772);;">
+               <children>
+                  <FontAwesomeIcon fill="#fcf5f5" glyphName="GRADUATION_CAP" layoutX="69.0" layoutY="174.0" size="10em" />
+                  <Label layoutX="15.0" layoutY="192.0" text="student management system" textFill="#fcfafa">
+                     <font>
+                        <Font name="Tahoma" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="285.0" layoutY="25.0" prefHeight="422.0" prefWidth="315.0">
+               <children>
+                  <TextField fx:id="txtusername" layoutX="82.0" layoutY="145.0" prefHeight="30.0" prefWidth="220.0" promptText="Enter Username" />
+                  <PasswordField fx:id="txtpassword" layoutX="83.0" layoutY="193.0" prefHeight="30.0" prefWidth="220.0" promptText="Enter password" />
+                  <FontAwesomeIcon fill="#7858e4" glyphName="USER" layoutX="28.0" layoutY="174.0" size="3em" />
+                  <FontAwesomeIcon fill="#1679b2" glyphName="KEY" layoutX="31.0" layoutY="223.0" size="3em" />
+                  <Button fx:id="btnclose" layoutX="279.0" layoutY="-1.0" mnemonicParsing="false" onAction="#closehandler" prefHeight="25.0" prefWidth="36.0" />
+                  <FontAwesomeIcon fill="#2ca772" glyphName="CLOSE" layoutX="280.0" layoutY="25.0" size="3em" />
+                  <Button fx:id="btnlogin" layoutX="82.0" layoutY="241.0" mnemonicParsing="false" onAction="#loginhandler" prefHeight="30.0" prefWidth="220.0" style="-fx-background-radius: 50; -fx-background-color: linear-gradient(to bottom, #2968a7, #14405d);" text="Login" textFill="#fffbfb">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="lblresult" layoutX="103.0" layoutY="356.0" prefHeight="25.0" prefWidth="182.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

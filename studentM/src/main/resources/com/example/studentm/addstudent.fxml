@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="35.0" prefWidth="1100.0" styleClass="top-form" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentm.Addstudent">
+   <children>
+      <FontAwesomeIcon glyphName="GRADUATION_CAP" layoutX="14.0" layoutY="24.0" size="1.5em" />
+      <Label layoutX="45.0" layoutY="9.0" text="Student Management System">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="close" layoutX="1021.0" layoutY="5.0" mnemonicParsing="false" onAction="#close" prefHeight="24.0" prefWidth="55.0" styleClass="close" stylesheets="@../../../../../../../homlog/src/main/src/studentmanagementsystem/dashboardDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+      <Button fx:id="minimize" layoutX="1000.0" layoutY="2.0" mnemonicParsing="false" onAction="#minimize" prefHeight="24.0" prefWidth="43.0" styleClass="minimize" stylesheets="@../../../../../../../homlog/src/main/src/studentmanagementsystem/dashboardDesign.css" />
+      <AnchorPane layoutX="-1.0" layoutY="33.0" prefHeight="570.0" prefWidth="210.0" style="-fx-background-color: linear-gradient(to bottom right, #2d658c, #2ca772);">
+         <children>
+            <FontAwesomeIcon fx:id="logout" fill="#d4f540" glyphName="SIGN_OUT" layoutX="28.0" layoutY="517.0" size="2em" />
+            <FontAwesomeIcon fill="#f8f6f6" glyphName="HOME" layoutX="13.0" layoutY="220.0" size="2em" />
+            <Button fx:id="btnhome" alignment="CENTER" layoutX="41.0" layoutY="196.0" mnemonicParsing="false" onAction="#homehandler" prefHeight="24.0" prefWidth="74.0" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnstudent" alignment="CENTER" layoutX="38.0" layoutY="233.0" mnemonicParsing="false" onAction="#studenthandler" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: transparent;" text="Add Students" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <FontAwesomeIcon fill="#f8f6f6" glyphName="PLUS_CIRCLE" layoutX="15.0" layoutY="253.0" size="2em" />
+            <FontAwesomeIcon fill="#f8f6f6" glyphName="BOOK" layoutX="14.0" layoutY="291.0" size="2em" />
+            <FontAwesomeIcon fill="WHITE" glyphName="CLIPBOARD" layoutX="16.0" layoutY="331.0" size="2em" />
+            <Button fx:id="btngrade" alignment="CENTER" layoutX="44.0" layoutY="306.0" mnemonicParsing="false" onAction="#gradehandler" prefHeight="29.0" prefWidth="152.0" style="-fx-background-color: transparent;" text="Grades of Students" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <FontAwesomeIcon fill="WHITE" glyphName="PLUS_CIRCLE" layoutX="4.0" layoutY="13.0" size="1.5em" />
+      <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="4.0" layoutY="13.0" size="1.5em" />
+      <FontAwesomeIcon fill="WHITE" glyphName="CLIPBOARD" layoutX="4.0" layoutY="13.0" size="1.5em" />
+      <Label layoutX="53.0" layoutY="530.0" text="Sign Out" textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btncourses" alignment="CENTER" layoutX="36.0" layoutY="299.0" mnemonicParsing="false" onAction="#courseshandler" prefHeight="29.0" prefWidth="152.0" style="-fx-background-color: transparent;" text="Available Courses" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <FontAwesomeIcon glyphName="MINUS" layoutX="1016.0" layoutY="23.0" size="1.2em" />
+      <FontAwesomeIcon glyphName="CLOSE" layoutX="1065.0" layoutY="22.0" size="1.2em" />
+      <TableView fx:id="tablestudent" layoutX="232.0" layoutY="109.0" onMouseClicked="#getdata" prefHeight="209.0" prefWidth="681.0">
+        <columns>
+          <TableColumn fx:id="StID" prefWidth="75.0" text="StID" />
+          <TableColumn fx:id="FnaME" prefWidth="104.0" text="First Name" />
+            <TableColumn fx:id="LName" prefWidth="142.0" text="Last Name" />
+            <TableColumn fx:id="Gender" prefWidth="105.0" text="Gender" />
+            <TableColumn fx:id="Course" prefWidth="103.0" text="Course" />
+            <TableColumn fx:id="Year" prefWidth="104.0" text="Year" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TextField fx:id="txtsaerch" alignment="CENTER" layoutX="249.0" layoutY="46.0" prefHeight="40.0" prefWidth="233.0" promptText="saerch" />
+      <FontAwesomeIcon glyphName="SEARCH" layoutX="260.0" layoutY="70.0" size="2em" />
+      <Label layoutX="239.0" layoutY="354.0" text="StID:">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtstid" alignment="CENTER" layoutX="293.0" layoutY="347.0" prefHeight="31.0" prefWidth="182.0" />
+      <Label layoutX="237.0" layoutY="415.0" text="Fname:">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtfname" alignment="CENTER" layoutX="292.0" layoutY="408.0" prefHeight="31.0" prefWidth="182.0" />
+      <Label layoutX="239.0" layoutY="475.0" text="Lname:">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtlname" alignment="CENTER" layoutX="296.0" layoutY="468.0" prefHeight="31.0" prefWidth="182.0" />
+      <Label layoutX="549.0" layoutY="355.0" text="Gender:">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtgender" alignment="CENTER" layoutX="613.0" layoutY="348.0" prefHeight="31.0" prefWidth="182.0" />
+      <Label layoutX="547.0" layoutY="416.0" text="Course:">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtcourse" alignment="CENTER" layoutX="612.0" layoutY="409.0" prefHeight="31.0" prefWidth="182.0" />
+      <Label layoutX="549.0" layoutY="476.0" text="year:">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtyaer" alignment="CENTER" layoutX="613.0" layoutY="469.0" prefHeight="31.0" prefWidth="182.0" />
+      <Button fx:id="btnadd" layoutX="599.0" layoutY="537.0" mnemonicParsing="false" onAction="#addhandler" style="-fx-background-color: #2d5278; -fx-background-radius: 8px; -fx-cursor: hand; -fx-text-fill: #fff; -fx-font-size: 14px; -fx-font-family: Arial;" text="Add" />
+      <Button fx:id="btnupdate" layoutX="673.0" layoutY="536.0" mnemonicParsing="false" onAction="#updatehandler" style="-fx-background-color: #2d7755; -fx-background-radius: 8px; -fx-cursor: hand; -fx-text-fill: #fff; -fx-font-size: 14px; -fx-font-family: Arial;" text="Update" />
+      <Button fx:id="btndelete" layoutX="771.0" layoutY="536.0" mnemonicParsing="false" onAction="#deletehandler" style="-fx-background-color: #90242f; -fx-background-radius: 8px; -fx-cursor: hand; -fx-text-fill: #fff; -fx-font-size: 14px; -fx-font-family: Arial;" text="Delete" />
+      <Button fx:id="btnsearch" layoutX="522.0" layoutY="53.0" mnemonicParsing="false" onAction="#saerchhandler" prefHeight="26.0" prefWidth="87.0" style="-fx-background-color: #2d5278; -fx-background-radius: 8px; -fx-cursor: hand; -fx-text-fill: #fff; -fx-font-size: 14px; -fx-font-family: Arial;" text="search" />
+   </children>
+</AnchorPane>
